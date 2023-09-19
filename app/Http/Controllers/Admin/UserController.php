@@ -78,6 +78,7 @@ class UserController extends Controller
         $title = 'Cập nhật thông tin';
         if ($id) {
             $user = User::find($id);
+            $categories = DB::table('categories')->get();
             if ($request->isMethod('post')) {
                 $data = $request->all();
                 $data = $request->except('_token');

@@ -17,7 +17,7 @@ class Post extends Model
         'thumbnail',
         'description',
         'category_id',
-        'user_id',
+        'author_id',
         'created_at',
         'updated_at',
         'deleted_at'

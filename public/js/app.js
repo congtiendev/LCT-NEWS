@@ -66,4 +66,7 @@ $(function () {
     $("#thumbnail-upload").change(function () {
         readURL(this, "#thumbnail");
     });
+    $("#banner-upload").change(function () {
+        readURL(this, "#banner");
+    });
 });

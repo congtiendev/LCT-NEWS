@@ -34,7 +34,16 @@ class PostRequest extends FormRequest
                             'title' => 'required|min:3|max:100',
                             'content' => 'required',
                             'category_id' => 'required',
-                            'thumbnail' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                            'thumbnail' => 'required|mimes:jpeg,png,jpg,gif,svg|max:5048',
+                            'description' => 'required|min:10',
+                        ];
+                        break;
+                    case 'updatePost':
+                        $rules = [
+                            'title' => 'required|min:3|max:100',
+                            'content' => 'required',
+                            'category_id' => 'required',
+                            'thumbnail' => 'mimes:jpeg,png,jpg,gif,svg|max:5048',
                             'description' => 'required|min:10|max:255',
                         ];
                         break;
@@ -59,7 +68,6 @@ class PostRequest extends FormRequest
             'thumbnail.max' => 'Ảnh không được vượt quá 2MB',
             'description.required' => 'Mô tả không được để trống',
             'description.min' => 'Mô tả phải có ít nhất 10 ký tự',
-            'description.max' => 'Mô tả không được vượt quá 255 ký tự',
         ];
     }
 }

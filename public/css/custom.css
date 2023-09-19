@@ -143,28 +143,28 @@
 .loading-create-post img {
     width: 100px;
 }
-#content__post {
+.content__post {
     padding: 20px;
 }
-#content__post h1 {
+.content__post h1 {
     font-size: 35px;
     font-weight: 700;
     color: #000000;
 }
-#content__post h2 {
+.content__post h2 {
     font-size: 30px;
     font-weight: 700;
     color: #000000;
 }
 
-#content__post h3 {
+.content__post h3 {
     margin: 10px 0;
     font-size: 25px;
     font-weight: 600;
     color: #000000;
 }
 
-#content__post figure {
+.content__post figure {
     color: gray;
     margin: 10px auto;
     display: flex;
@@ -174,31 +174,31 @@
     align-items: center;
 }
 
-#content__post div {
+.content__post div {
     margin: 25px 0;
     color: #333;
 }
 
-#content__post p {
+.content__post p {
     font-size: 16px;
     font-weight: 400;
     color: #000000;
 }
 
-#content__post span {
+.content__post span {
     font-size: 16px;
     font-weight: 600;
     color: #000000;
 }
 
-#content__post a {
+.content__post a {
     font-size: 16px;
     font-weight: 600;
     color: #4a47ee;
     text-decoration: none;
 }
 
-#content__post a:hover {
+.content__post a:hover {
     text-decoration: underline;
     color: #1c18e2;
     cursor: pointer;

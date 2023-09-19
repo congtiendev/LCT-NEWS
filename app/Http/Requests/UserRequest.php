@@ -28,6 +28,20 @@ class UserRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 switch ($currenAction) {
+                    case 'login':
+                        $rules = [
+                            'email' => 'required',
+                            'password' => 'required',
+                        ];
+                        break;
+                    case 'register':
+                        $rules = [
+                            'fullname' => 'required|min:3|max:50',
+                            'username' => 'required|min:3|max:20|unique:users',
+                            'email' => 'required|email|unique:users',
+                            'password' => 'required|min:3|max:50',
+                            'confirm_password' => 'required|same:password',
+                        ];
                     case 'createUser':
                         $rules = [
                             'fullname' => 'required|min:3|max:50',
@@ -71,6 +85,8 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
+            'email.required' => 'Tài khoản không được để trống',
+            'password.required' => 'Mật khẩu không được để trống',
             'fullname.required' => 'Họ tên không được để trống',
             'fullname.min' => 'Họ tên phải có ít nhất 3 ký tự',
             'fullname.max' => 'Họ tên không được vượt quá 50 ký tự',
